@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Cart</title>
+    
+    <!-- The following line references an external css file -->
+    <!-- It defines style rules for your page, and elements in your page -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Load external JS files -->
+    <!-- This is where you will do most of the 'work' for your applications -->
+    <script src="js/main.js"></script>
+    
+</head>
+<body>
+    <div id="ui" class="display">
+        <div id="time" class="topcontainer">
+            <h><u> Time Elapsed </u></h>
+            <br />
+            <b id="timeelapsed">00:00:00</b>
+        </div>
+        <div id="items" class="topcontainer">
+            <h><u> Total Items </u></h>
+            <br />
+            <b id="itemcount">0</b>
+        </div>
+        <div id="cost" class="topcontainer">
+            <h><u> Total Cost </u></h>
+            <br />
+            <b id="costcount">$0.00</b>
+        </div>
+
+        <div id="list" class="listcontainer">
+            <h class="listheader"><b>Shopping List</b></h>
+            <div id="shoplist" class="list"></div>
+            <button id="clearlist" class="listclear"><b>Clear List</b></button>
+        </div>
+
+        <div id="main" class="maincontainer">
+            <input id="searchbar" class="searchbar">
+            </input>
+            <button id="searchbtn" class="searchbarbtn">
+                <img class="searchbtnimg" src="https://cdn-icons-png.flaticon.com/512/106/106469.png" alt="search button">
+            </button>
+            <div id="info" class="iteminfo">
+                <h><b><u>Item Info</u></b></h>
+                <p id="item"><b>Search In-Store<br />Item to Display<br />Item Info</b></p>
+            </div>
+        </div>
+
+        <div id="cart" class="cartcontainer">
+            <h class="listheader"><b>Cart</b></h>
+            <div id="cartlist" class="cart"></div>
+            <button id="clearcart" class="listclear"><b>Clear Cart</b></button>
+        </div>
+
+        <div id="checkout" class="checkoutbutton">
+            <b>CHECKOUT</b>
+        </div>
+
+        <div id="searchmode" class="searchbutton" onclick="searchView">
+            <img class="searchimg" src="https://cdn-icons-png.flaticon.com/512/106/106469.png" alt="search icon">
+        </div>
+
+        <div id="couponmode" class="couponbutton" onclick="couponView">
+            <img class="couponimg" src="https://cdn1.iconfinder.com/data/icons/shopping-234/64/shopping_red_outline_coupon-512.png" alt="coupon icon">
+        </div>
+    </div>
+
+    <br />
+
+    <div id="testing" class="testcontainer">
+    <div class="column">
+     <h><b><u>Scan Item(s)</u></b></h><br />
+        <button id="scanitems" class="testbtn">Scan Random Items</button><br />
+        <button id="scanitem" class="testbtn">Scan Below Item</button>
+        <br />
+        <select id="scandrop" class="testdrop" onload="filldrops(this)"></select>
+    </div>
+    <div class="column">
+     <h><b><u>Add Item(s) to Shopping List</u></b></h><br />
+        <button id="listitems" class="testbtn">Add Random Items</button><br />
+        <button id="listitem" class="testbtn">Add Below Item</button>
+        <br />
+        <select id="listdrop" class="testdrop" onload="filldrops(this)"></select>
+    </div>
+    </div>
+</body>
+</html>
